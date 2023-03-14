@@ -41,6 +41,7 @@ function distanceTravelledInFeet(startingPoint, destination) {
 function calculatesFarePrice(startingPoint, destination){
  const distanceInTravelled =  distanceTravelledInFeet(startingPoint, destination)
  const costPerfeet = 0.02
+ const costOverTwothousand = 25
 
 if (distanceInTravelled < 400 ){
   
@@ -51,7 +52,13 @@ else if ( distanceInTravelled <= 2000){
 
   return (distanceInTravelled -400) * costPerfeet
 }
+else if ( distanceInTravelled > 2000 && distanceInTravelled <=  2500){
 
+  return 25
+}
+else {
+  return 'cannot travel that far'
+}
 
 
 }
