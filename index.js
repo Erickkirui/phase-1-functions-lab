@@ -62,7 +62,7 @@ else {
 
 
 }
-console.log(calculatesFarePrice(50, 60))
+
 
 
 
