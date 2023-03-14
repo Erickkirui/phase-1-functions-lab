@@ -1,22 +1,34 @@
 // Code your solution in this file!
 function distanceFromHqInBlocks(pickupPoint) {
-    //returns the number of blocks given a value
+  //returns the number of blocks given a value
 
-   const headQuater = 42 
+ const headQuater = 42 
 
-   //return pickupPoint - headQuater
-   if (pickupPoint >= 42){
-      
-    return pickupPoint - headQuater
+ //return pickupPoint - headQuater
+ if (pickupPoint >= 42){
+    
+  return pickupPoint - headQuater
 
-   }
-   else{
+ }
+ else{
+
+ return headQuater -pickupPoint  
+ }
+
+
+}
+
+function distanceFromHqInFeet(pickupPoint) {
  
-   return headQuater -pickupPoint  
-   }
+  // call the distanceFromHqInBlocks function from inside the distanceFromHqInFeet function,
+   const distanceInBlocks =  distanceFromHqInBlocks(pickupPoint)
+   const feetPerBlock = 264
+
+   return distanceInBlocks * feetPerBlock
+   
+}
 
 
-  }
 
- distanceFromHqInBlocks(43)
+
 
