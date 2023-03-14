@@ -32,18 +32,30 @@ function distanceFromHqInFeet(pickupPoint) {
 function distanceTravelledInFeet(startingPoint, destination) {
   
    const feetPerBlock = 264
-   const distanceTravelled = (destination - startingPoint)
+   const distanceTravelled = Math.abs(destination - startingPoint)
    return distanceTravelled * feetPerBlock
   
 }
-console.log (distanceTravelledInFeet(50, 60))
 
 // 
+function calculatesFarePrice(startingPoint, destination){
+ const distanceInTravelled =  distanceTravelledInFeet(startingPoint, destination)
+ const costPerfeet = 0.02
+
+if (distanceInTravelled < 400 ){
+  
+  return 0
+
+}
+else if ( distanceInTravelled <= 2000){
+
+  return (distanceInTravelled -400) * costPerfeet
+}
 
 
 
-
-
+}
+console.log(calculatesFarePrice(50, 60))
 
 
 
